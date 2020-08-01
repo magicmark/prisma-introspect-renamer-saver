@@ -3,8 +3,9 @@
 ![](https://i.fluffy.cc/q6wwsSBCTXKGkgcxnCBq666RWjMQPWn1.png)
 
 PIRS (prisma-introspect-renamer-saver) transforms a `.prisma` file to apply a set
-of diffs on the field names. This automates the mapping that may have to be done
-after each time `$ prisma introspect` is run.
+of diffs on the generated data model. This automates the mapping that may have to
+be done after each time `$ prisma introspect` is run to make it fit the
+[naming conventions][conventions].
 
 ## Install
 
