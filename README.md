@@ -160,4 +160,4 @@ I'd love to do a fancy AST transformation, but I didn't fancy writing my own par
 
 ## Contact
 
-- https://twitter.com/mark_larah
+- [@mark_larah - https://twitter.com/mark_larah](https://twitter.com/mark_larah)
