@@ -43,7 +43,7 @@ an SQL Schema change
 
 Consider the following sample `schema.prisma` file:
 
-<details><summary><pre>schema.prisma</pre></summary>
+<details><summary><b>schema.prisma</b></summary>
 <p>
 
 ```prisma
