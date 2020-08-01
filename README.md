@@ -43,7 +43,7 @@ an SQL Schema change
 
 Consider the following sample `schema.prisma` file:
 
-<details><summary>schema.prisma</summary>
+<details><summary><pre>schema.prisma</pre></summary>
 <p>
 
 ```prisma
@@ -86,10 +86,11 @@ model Photo {
 </details>
 
 In accordance with the [naming conventions][conventions], we'd probably want to be transform:
-- `User.UserSession` -> `User.sessions`
-- `User.Photo` -> `User.uploadedPhotos`
-- `UserSession.User` -> `UserSession.user`
-- `Photo.User` -> `Photo.uploadedBy`
+
+-   `User.UserSession` -> `User.sessions`
+-   `User.Photo` -> `User.uploadedPhotos`
+-   `UserSession.User` -> `UserSession.user`
+-   `Photo.User` -> `Photo.uploadedBy`
 
 [conventions]: https://www.prisma.io/docs/reference/tools-and-interfaces/introspection#rules-and-conventions
 
