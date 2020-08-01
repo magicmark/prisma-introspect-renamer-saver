@@ -20,8 +20,7 @@ interface Transforms {
 export default async function transform(
     prismaFilePath: string,
     transformsFilePath: string,
-    shouldWrite: boolean,
-): Promise<void> {
+): Promise<string> {
     assert(typeof prismaFilePath === 'string');
     assert(typeof transformsFilePath === 'string');
 
@@ -97,9 +96,5 @@ export default async function transform(
         }
     });
 
-    if (shouldWrite) {
-        await fsPromises.writeFile(prismaFilePath, lines.join(EOL));
-    } else {
-        console.log(lines.join(EOL));
-    }
+    return lines.join(EOL);
 }

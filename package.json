@@ -1,10 +1,10 @@
 {
     "name": "pirs",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "license": "MIT",
     "scripts": {
-        "build": "tsc",
-        "prepublish": "yarn tsc"
+        "test": "ava",
+        "build": "tsc"
     },
     "dependencies": {
         "js-yaml": "^3.14.0",
@@ -15,6 +15,9 @@
         "@types/js-yaml": "^3.12.5",
         "@types/node": "^14.0.27",
         "@types/yargs": "^15.0.5",
+        "ava": "^3.11.0",
+        "dedent": "^0.7.0",
+        "mock-fs": "^4.12.0",
         "typescript": "^3.9.7"
     },
     "main": "./lib/cjs/index.js",

@@ -1,5 +1,6 @@
 import yargs from 'yargs';
-import transform from './transform'
+import { promises as fsPromises } from 'fs';
+import transform from './transform';
 
 async function main() {
     const { write, prismaFile, transformsFile } = yargs
@@ -25,7 +26,13 @@ async function main() {
         .help()
         .version(false).argv;
 
-        transform(prismaFile, transformsFile, write);
+    const output = await transform(prismaFile, transformsFile);
+
+    if (write) {
+        await fsPromises.writeFile(prismaFile, output);
+    } else {
+        console.log(output);
+    }
 }
 
 main();
