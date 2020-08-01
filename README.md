@@ -43,10 +43,10 @@ an SQL Schema change
 
 Consider the following sample `schema.prisma` file:
 
-<details>
-<summary>`schema.prisma`</summary>
+<details><summary>schema.prisma</summary>
 <p>
-```
+
+```prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -81,6 +81,7 @@ model Photo {
   User           User    @relation(fields: [userUploadedId], references: [id])
 }
 ```
+
 </p>
 </details>
 
