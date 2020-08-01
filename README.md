@@ -45,6 +45,7 @@ Consider the following sample `schema.prisma` file:
 
 <details>
 <summary>`schema.prisma`</summary>
+<p>
 ```
 generator client {
   provider = "prisma-client-js"
@@ -80,6 +81,7 @@ model Photo {
   User           User    @relation(fields: [userUploadedId], references: [id])
 }
 ```
+</p>
 </details>
 
 In accordance with the [naming conventions][conventions], we'd probably want to be transform:
