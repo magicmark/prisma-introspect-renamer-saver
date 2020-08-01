@@ -94,11 +94,7 @@ In accordance with the [naming conventions][conventions], we'd probably want to 
 
 [conventions]: https://www.prisma.io/docs/reference/tools-and-interfaces/introspection#rules-and-conventions
 
-## API
-
-Currently, we only support rewriting the field names on models.
-
-The `--transformsFile` (or `-t`) arg must point to a yaml file that looks like this:
+Applying the following `transforms.yaml` file lets us do just that:
 
 ```yaml
 models:
@@ -123,3 +119,44 @@ models:
             attributes:
                 fieldName: uploadedBy
 ```
+
+See [the tests](./tests/test.js) to see this in action.
+
+## API
+
+Currently, we only support rewriting the field names on models.
+
+The `--transformsFile` (or `-t`) arg must point to a yaml file in the following
+format:
+
+```typescript
+interface Transforms {
+    models: Array<{
+        name: string;
+        fields: Array<{
+            field: string;
+            attributes: {
+                fieldName?: string;
+            };
+        }>;
+    }>;
+}
+```
+
+## FAQs
+
+#### Why not use \<insert some other tool here>?
+
+I googled and didn't find any other lightweight solutions that that did this. But maybe I missed something! I figure if it does exist, the best way to find out is to publish this and have people let me know about it :)
+
+#### I want this to work with \<insert feature here>?
+
+If there's a feature missing that you think should be added - open up an issue! Even better, PRs are super welcome too :)
+
+#### Why is this code so janky?
+
+I'd love to do a fancy AST transformation, but I didn't fancy writing my own parser :p
+
+## Contact
+
+- https://twitter.com/mark_larah
