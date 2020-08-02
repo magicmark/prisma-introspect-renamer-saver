@@ -38,7 +38,12 @@ Howver according to the [Prisma's docs](https://www.prisma.io/docs/reference/too
 
 It seems as though any artisanally hand crafted changes you make to the generated
 `.prisma` file will get blown away each time you run `$ prisma introspect` after
-an SQL Schema change
+an SQL Schema change.
+
+`pirs` addresses this by allowing you to declare the diffs you want to apply in a
+YAML file. After each time `$ prisma introspect` is run, we can now run
+`$ yarn pirs` to automatically rename the fields, without having to do it by hand
+all over again. (Think of this as a fancy patch file).
 
 ## Example
 
