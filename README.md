@@ -163,6 +163,10 @@ If there's a feature missing that you think should be added - open up an issue! 
 
 I'd love to do a fancy AST transformation, but I didn't fancy writing my own parser :p
 
+#### Is this over-engineered? This seems over-engineered.
+
+Probably. Let me know what you think in a GitHub issue / on Twitter, and what you'd suggest instead!
+
 ## Contact
 
 - [@mark_larah - https://twitter.com/mark_larah](https://twitter.com/mark_larah)
