@@ -42,7 +42,7 @@ an SQL Schema change.
 
 `pirs` addresses this by allowing you to declare the diffs you want to apply in a
 YAML file. After each time `$ prisma introspect` is run, we can now run
-`$ yarn pirs` to automatically rename the fields, without having to do it by hand
+`$ yarn pirs` to magically rename the fields, without having to do it by hand
 all over again. (Think of this as a fancy patch file).
 
 ## Example
@@ -91,7 +91,7 @@ model Photo {
 </p>
 </details>
 
-In accordance with the [naming conventions][conventions], we'd probably want to be transform:
+In accordance with the [naming conventions][conventions], we'd probably want to transform:
 
 -   `User.UserSession` -> `User.sessions`
 -   `User.Photo` -> `User.uploadedPhotos`
